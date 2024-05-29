@@ -1,0 +1,14 @@
+---
+
+-  hosts: all
+   become: yes
+   tasks:
+    
+   - name: intall apache server and php extention to make my apache server dynamic
+     apt:
+        name: 
+          - apache2
+          - libapache2-mod-php
+        state: latest
+     when: ansible_distribution_version == "24.04"
+

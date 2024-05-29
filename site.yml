@@ -1,0 +1,30 @@
+---
+
+-  hosts: all
+   become: yes
+   tasks:
+    
+   - name: intall updates on both servers
+     apt:
+        update_cache: yes    
+
+-  hosts: web_servers
+   become: yes
+   tasks:
+    
+   - name: intall apache server and php extention to make my apache server dynamic
+     apt:
+        name: 
+          - apache2
+          - libapache2-mod-php
+        state: latest
+     
+
+
+- hosts: db_servers
+  become: true
+  tasks:
+    - name: installing mariadb on server 2
+      apt:
+        name: mariadb-server
+        state: latest
