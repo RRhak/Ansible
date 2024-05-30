@@ -1,6 +1,7 @@
 ---
 
 -  hosts: all
+   tags: always
    become: yes
    tasks:
     
@@ -9,6 +10,7 @@
         update_cache: yes    
 
 -  hosts: web_servers
+   tags: web
    become: yes
    tasks:
     
@@ -22,6 +24,7 @@
 
 
 - hosts: db_servers
+  tags: db
   become: true
   tasks:
     - name: installing mariadb on server 2
