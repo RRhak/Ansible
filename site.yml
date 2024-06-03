@@ -6,15 +6,16 @@
    tasks:
     
    - name: intall updates on both servers
+     tags: always
      apt:
         update_cache: yes    
 
 -  hosts: web_servers
-   tags: web
    become: yes
    tasks:
     
    - name: intall apache server and php extention to make my apache server dynamic
+     tags: web
      apt:
         name: 
           - apache2
@@ -24,10 +25,10 @@
 
 
 - hosts: db_servers
-  tags: db
   become: true
   tasks:
     - name: installing mariadb on server 2
+      tags: db
       apt:
         name: mariadb-server
         state: latest
