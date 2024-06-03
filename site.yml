@@ -21,8 +21,13 @@
           - apache2
           - libapache2-mod-php
         state: latest
-     
-
+   - name: up to date the content of my site web !!!     
+     copy:
+      src: my_server_web/rachid.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 644
 
 - hosts: db_servers
   become: true
