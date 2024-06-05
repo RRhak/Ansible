@@ -28,7 +28,11 @@
       owner: root
       group: root
       mode: 644
-
+   - name: started or stopped the apache server
+     tags: apaches
+     systemd:
+      name: apache2
+      state: stopped
 - hosts: db_servers
   become: true
   tasks:
