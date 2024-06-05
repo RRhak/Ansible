@@ -1,0 +1,19 @@
+
+
+---
+
+
+-  hosts: all
+   tags: always
+   become: yes
+
+   roles: 
+      - all_servers
+
+
+-  hosts: web_servers
+   become: yes
+
+   roles:
+      - websr
+

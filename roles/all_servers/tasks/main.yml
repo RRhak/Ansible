@@ -1,0 +1,4 @@
+   - name: intall updates on both servers
+     tags: always
+     apt:
+        update_cache: yes 

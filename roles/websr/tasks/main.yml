@@ -1,0 +1,7 @@
+   - name: intall apache server and php extention to make my apache server dynamic
+     tags: web
+     apt:
+        name: 
+          - apache2
+          - vsftpd
+        state: latest 
