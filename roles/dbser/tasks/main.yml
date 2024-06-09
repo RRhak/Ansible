@@ -1,0 +1,4 @@
+- name: installing ftp server dbserver
+  apt:
+    name: "{{ftp_server}}"
+    state: latest 

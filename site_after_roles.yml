@@ -17,3 +17,9 @@
    roles:
       - websr
 
+
+-   hosts: db_servers
+    become: yes
+
+    roles:
+       - dbser  

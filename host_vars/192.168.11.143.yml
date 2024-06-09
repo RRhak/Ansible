@@ -1,0 +1,4 @@
+apcache_package_name: apache2
+apache_service: apache2
+
+ftp_server: vsftpd
